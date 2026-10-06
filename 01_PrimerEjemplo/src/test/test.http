@@ -1,0 +1,65 @@
+### Variable global con el puerto por defecto de Spring Boot
+@baseUrl = http://localhost:8080
+
+==================================================
+### PETICIONES DE PRODUCTOS (/api/product)
+==================================================
+
+### 1. Obtener todos los productos
+GET {{baseUrl}}/api/product
+
+### 2. Obtener un producto por ID
+GET {{baseUrl}}/api/product/1
+
+### 3. Crear un nuevo producto
+POST {{baseUrl}}/api/product
+Content-Type: application/json
+
+{
+  "name": "Teclado Mecánico RGB",
+  "price": 79.99,
+  "details": "Teclado mecánico con switch red y disposición ISO"
+}
+
+### 4. Actualizar un producto existente
+PUT {{baseUrl}}/api/product/1
+Content-Type: application/json
+
+{
+  "name": "Smartphone Pro Max (Edición Especial)",
+  "price": 1099.99,
+  "details": "Pantalla OLED 6.7 pulgadas, 512GB storage"
+}
+
+### 5. Eliminar un producto
+DELETE {{baseUrl}}/api/product/3
+
+
+==================================================
+### PETICIONES DE CATEGORÍAS (/category)
+==================================================
+
+### 6. Obtener todas las categorías
+GET {{baseUrl}}/category
+
+### 7. Obtener una categoría por ID
+GET {{baseUrl}}/category/1
+
+### 8. Crear una nueva categoría
+POST {{baseUrl}}/category
+Content-Type: application/json
+
+{
+  "name": "Deportes y Exterior"
+}
+
+### 9. Actualizar una categoría existente
+PUT {{baseUrl}}/category/1
+Content-Type: application/json
+
+{
+  "name": "Electrónica y Tecnología"
+}
+
+### 10. Eliminar una categoría
+DELETE {{baseUrl}}/category/3
